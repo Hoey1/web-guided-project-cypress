@@ -34,22 +34,22 @@ describe('Form inputs', () => {
 })
 
 describe('Form validation', () => {
-  // navigating to the site again
-  // assert that there are no validation error to start with
-  // type a single char in the username input
-  // assert there IS a validation error
-  // type another char in the username input
-  // assert there still IS a validation error
-  // type a third char
-  // assert the error is gone
   it('validates username correctly', () => {
+    // navigating to the site again
+    // assert that there are no validation error to start with
+    // type a single char in the username input
+    // assert there IS a validation error
     cy.visit('http://localhost:1234')
     cy.contains('Username required').should('not.exist')
     cy.get('input[name="username"]').type('a')
     cy.contains('Username required')
+    // type another char in the username input
+    // assert there still IS a validation error
+    // type a third char
+    // assert the error is gone
   })
 })
 
 describe('Submitting and deleting friends', () => {
-  
+
 })
