@@ -42,8 +42,14 @@ describe('Form validation', () => {
   // assert there still IS a validation error
   // type a third char
   // assert the error is gone
+  it('validates username correctly', () => {
+    cy.visit('http://localhost:1234')
+    cy.contains('Username required').should('not.exist')
+    cy.get('input[name="username"]').type('a')
+    cy.contains('Username required')
+  })
 })
 
 describe('Submitting and deleting friends', () => {
-
+  
 })
