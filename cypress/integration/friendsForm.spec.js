@@ -56,5 +56,17 @@ describe('Form validation', () => {
 })
 
 describe('Submitting and deleting friends', () => {
-
+  // navigate the site again
+  // fill out form
+  // submit form by hitting submit buttob
+  // assert the new friend is there
+  // hit delete on new friend
+  // assert new friend is gone
+  it('can submit and delete a friend', () => {
+    cy.visit('http://localhost:1234')
+    cy.get('input[name="username"]').type('Barbara')
+    cy.get('input[name="email"]').type('barbara@barbara.com')
+    cy.get('select[name="role"]').select('TL')
+    cy.get('button.submit').click()
+  })
 })
