@@ -20,12 +20,22 @@ describe('Form inputs', () => {
       .type('lady@gaga.com')
       .should('have.value', 'lady@gaga.com')
   })
+
+  it('can select a role', () => {
+    cy.get('select[name="role"]')
+      .select('Instructor')
+  })
+
+  it('submit button not disabled any more', () => {
+    cy.get('button.submit')
+      .should('not.be.disabled')
+  })
 })
 
 describe('Form validation', () => {
-  
+
 })
 
 describe('Submitting and deleting friends', () => {
-  
+
 })
