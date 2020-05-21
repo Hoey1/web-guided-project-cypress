@@ -47,6 +47,11 @@ describe('Form validation', () => {
     // assert there still IS a validation error
     // type a third char
     // assert the error is gone
+    cy.get('input[name="username"]').type('b')
+    cy.contains("Username required").should('exist')
+
+    cy.get('input[name="username"]').type('c')
+    cy.contains("Username required").should('not.exist')
   })
 })
 
