@@ -59,12 +59,12 @@ describe('Submitting and deleting friends', () => {
   it('can submit and delete a friend', () => {
     // navigate the site again
     // fill out form
-    // submit form by hitting submit buttob
-    // assert the new friend is there
     cy.visit('http://localhost:1234')
     cy.get('input[name="username"]').type('Barbara')
     cy.get('input[name="email"]').type('barbara@barbara.com')
     cy.get('select[name="role"]').select('TL')
+
+    // submit form by hitting submit button
     cy.get('button.submit').click()
 
     // checking whether h2 exists with 'Barbara' content
