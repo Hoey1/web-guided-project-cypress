@@ -2,10 +2,12 @@
   "name": "web-guided-project-cypress",
   "version": "0.0.1",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "cy": "cypress open"
   },
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^4.6.0",
     "eslint": "^7.0.0",
     "eslint-plugin-react": "^7.20.0",
     "less": "^3.11.1",
