@@ -9,11 +9,17 @@ describe('Form inputs', () => {
       .should('be.disabled')
   })
 
-
   it('can type a username', () => {
-    
+    cy.get('input[name="username"]')
+      .type('Lady Gaga')
+      .should('have.value', 'Lady Gaga')
   })
 
+  it('can type an email', () => {
+    cy.get('input[name="email"]')
+      .type('lady@gaga.com')
+      .should('have.value', 'lady@gaga.com')
+  })
 })
 
 describe('Form validation', () => {
