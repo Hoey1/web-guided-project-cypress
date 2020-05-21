@@ -24,6 +24,7 @@ describe('Form inputs', () => {
   it('can select a role', () => {
     cy.get('select[name="role"]')
       .select('Instructor')
+      .should('have.value', 'Instructor')
   })
 
   it('submit button not disabled any more', () => {
