@@ -8,6 +8,12 @@ describe('Form inputs', () => {
     cy.get('button.submit')
       .should('be.disabled')
   })
+
+
+  it('can type a username', () => {
+    
+  })
+
 })
 
 describe('Form validation', () => {
